@@ -130,7 +130,7 @@ module LinkedIn
       end
 
       def posts(options={})
-        path = "#{person_path(options)}/shares"
+        path = "#{person_path(options)}/network/updates"
         simple_query(path, options)
       end
     end
