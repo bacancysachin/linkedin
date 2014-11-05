@@ -128,6 +128,11 @@ module LinkedIn
         path = "/people/~/network/updates/key=#{update_key}/is-liked"
         put(path, 'false', "Content-Type" => "application/json")
       end
+
+      def posts(options={})
+        path = "#{person_path(options)}/shares"
+        simple_query(path, options)
+      end
     end
   end
 end
