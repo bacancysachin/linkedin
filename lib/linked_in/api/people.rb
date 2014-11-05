@@ -68,6 +68,11 @@ module LinkedIn
         path = "#{picture_urls_path(options)}::(#{picture_size})"
         simple_query(path, options)
       end
+
+      def mutual_connections(options={})
+        path = "#{person_path(options)}/relation-to-viewer/related-connections"
+        simple_query(path, options)
+      end
     end
   end
 end
